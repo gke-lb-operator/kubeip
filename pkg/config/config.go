@@ -51,13 +51,13 @@ func setConfigDefaults() {
 
 // NewConfig initialize kubeip configuration
 func NewConfig() (*Config, error) {
-	var AdditionalNodePools []string
+	var additionalNodePools []string
 	viper.SetEnvPrefix("kubeip")
 	viper.AutomaticEnv()
 	setConfigDefaults()
-	AdditionalNodePoolsStr := viper.GetString("additionalnodepools")
-	if len(AdditionalNodePoolsStr) > 0 {
-		AdditionalNodePools = strings.Split(AdditionalNodePoolsStr, ",")
+	additionalNodePoolsStr := viper.GetString("additionalnodepools")
+	if len(additionalNodePoolsStr) > 0 {
+		additionalNodePools = strings.Split(additionalNodePoolsStr, ",")
 	}
 
 	c := Config{
@@ -65,7 +65,7 @@ func NewConfig() (*Config, error) {
 		LabelValue:          viper.GetString("labelvalue"),
 		NodePool:            viper.GetString("nodepool"),
 		ForceAssignment:     viper.GetBool("forceassignment"),
-		AdditionalNodePools: AdditionalNodePools,
+		AdditionalNodePools: additionalNodePools,
 		Ticker:              viper.GetDuration("ticker"),
 		AllNodePools:        viper.GetBool("allnodepools"),
 	}
