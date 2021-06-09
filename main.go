@@ -21,10 +21,10 @@
 package main
 
 import (
-	"github.com/Sirupsen/logrus"
 	c "github.com/doitintl/kubeip/pkg/client"
 	cfg "github.com/doitintl/kubeip/pkg/config"
 	"github.com/doitintl/kubeip/pkg/kipcompute"
+	"github.com/sirupsen/logrus"
 )
 
 var config *cfg.Config

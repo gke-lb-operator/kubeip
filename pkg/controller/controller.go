@@ -28,12 +28,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/Sirupsen/logrus"
-
 	cfg "github.com/doitintl/kubeip/pkg/config"
 	"github.com/doitintl/kubeip/pkg/kipcompute"
 	"github.com/doitintl/kubeip/pkg/types"
 	"github.com/doitintl/kubeip/pkg/utils"
+	"github.com/sirupsen/logrus"
 	api_v1 "k8s.io/api/core/v1"
 	meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"

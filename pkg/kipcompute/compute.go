@@ -26,10 +26,10 @@ import (
 	"time"
 
 	"cloud.google.com/go/compute/metadata"
-	"github.com/Sirupsen/logrus"
 	cfg "github.com/doitintl/kubeip/pkg/config"
 	"github.com/doitintl/kubeip/pkg/types"
 	"github.com/doitintl/kubeip/pkg/utils"
+	"github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2/google"
 	"google.golang.org/api/compute/v1"
