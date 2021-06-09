@@ -230,8 +230,7 @@ func (c *Controller) processItem(newEvent Event) error {
 	objectMeta := utils.GetObjectMetaData(obj)
 
 	// process events based on its type
-	switch newEvent.eventType {
-	case "create":
+	if newEvent.eventType == "create" {
 		// compare CreationTimestamp and serverStartTime and alert only on latest events
 		// Could be Replaced by using Delta or DeltaFIFO
 
